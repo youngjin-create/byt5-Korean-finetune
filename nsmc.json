@@ -1,0 +1,30 @@
+{
+    "task_name": "nsmc",
+    "model_name_or_path": "everdoubling/byt5-Korean-small",
+
+    "run_name": "byt5-Korean-small-nsmc",
+
+    "do_train": true,
+    "do_eval": true,
+    "do_predict": true,
+    "output_dir": "models/byt5-Korean-small-nsmc",
+    "overwrite_output_dir": true,
+
+    "learning_rate": 0.001,
+    "lr_scheduler_type": "linear",
+    "num_train_epochs": 5,
+    "warmup_steps": 0,
+    "per_device_train_batch_size": 16,
+    "gradient_accumulation_steps": 4,
+    "per_device_eval_batch_size": 16,
+    "logging_steps": 100,
+    "evaluation_strategy": "epoch",
+    "save_strategy": "epoch",
+    "save_total_limit": 3,
+    "predict_with_generate": true,
+    "load_best_model_at_end": true,
+    "ignore_data_skip": true,
+    "seed": 1,
+
+    "fp16": true
+}
